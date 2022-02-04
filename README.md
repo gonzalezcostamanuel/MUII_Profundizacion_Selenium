@@ -3,11 +3,7 @@
 
 # Sobre el trabajo
 
- Dado que a partir del ejercicio 4, todos los restantes son dar vueltas sobre la misma idea me pareció más interesante 
- realizar esos cuatro ejercicios y dedicar el resto del tiempo a introducir tecnologías y librerías muy usadas en testing como son:
- 
-- Behave
-- Allure
+ Se han implementado dos tecnologías a mayores sobre testing, además de utilizar Selenium.
 
 ## Behave
 
