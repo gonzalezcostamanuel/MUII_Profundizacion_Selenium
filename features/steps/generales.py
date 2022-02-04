@@ -30,6 +30,7 @@ def step_impl(context, boton):
 
 @step('se pulsa el boton que tiene por nombre de id "{boton}"')
 def step_impl(context, boton):
+    WebDriverWait(context.web, 1)
     btn = context.web.find_element(By.ID, boton)
     WebDriverWait(context.web, 1)
     btn.click()
@@ -37,10 +38,27 @@ def step_impl(context, boton):
 
 @step('se reenvia a la url "{url}"')
 def step_impl(context, url):
-    assert context.web.current_url == url, "Se esperaba < "+url+" > pero se ha obtenido < "+context.web.current_url+" >"
+    assert context.web.current_url == url, "Se esperaba < " + url + " > pero se ha obtenido < " + context.web.current_url + " >"
 
 
 @step(u'Wait {sec} sec')
 def step_impl(context, sec):
     time.sleep(int(sec))
 
+
+@then('aparece la clase "{elemento}" en pantalla')
+def step_impl(context, elemento):
+    elemento = context.web.find_element(By.CLASS_NAME, elemento)
+    assert elemento.is_displayed()\
+
+
+@then('aparece el id "{elemento}" en pantalla')
+def step_impl(context, elemento):
+    elemento = context.web.find_element(By.ID, elemento)
+    assert elemento.is_displayed()
+
+
+@step('se comprueba que el elemento con la clase "{clase}" tiene el texto asociado de "{texto}"')
+def step_impl(context, clase, texto):
+    elemento = context.web.find_element(By.CLASS_NAME, clase)
+    assert elemento.text == texto

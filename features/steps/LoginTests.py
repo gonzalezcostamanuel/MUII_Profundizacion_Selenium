@@ -19,8 +19,3 @@ def step_impl(context, usuario, contrasena):
     submit.click()
     WebDriverWait(context.web, 5)
 
-
-@then('aparece "{elemento}" en pantalla')
-def step_impl(context, elemento):
-    mensaje_error = context.web.find_element(By.CLASS_NAME, elemento)
-    assert mensaje_error.is_displayed()

@@ -8,7 +8,7 @@ Feature: Pruebas sobre el login
 
      Given se ha inicializado el contexto
       When se lanza el login con "<usuario>" y "<contrasena>"
-      Then aparece "<elemento>" en pantalla
+      Then aparece la clase "<elemento>" en pantalla
       Examples:
         | usuario         | contrasena    | elemento  |
         | badUser         | secret_sauce  | error     |
@@ -23,10 +23,10 @@ Feature: Pruebas sobre el login
 
      Given se ha inicializado el contexto
       When se lanza el login con "<usuario>" y "<contrasena>"
-      Then aparece "<elemento>" en pantalla
+      Then aparece el id "<elemento>" en pantalla
       Examples:
         | usuario           | contrasena        | elemento             |
-        | standard_user     | secret_sauce      | bm-burger-button     |
-        | locked_out_user   | secret_sauce      | bm-burger-button     |
-        | problem_user      | secret_sauce      | bm-burger-button     |
-        | performance_glitch_user   | secret_sauce      | bm-burger-button     |
+        | standard_user     | secret_sauce      | react-burger-menu-btn     |
+        | locked_out_user   | secret_sauce      | react-burger-menu-btn     |
+        | problem_user      | secret_sauce      | react-burger-menu-btn     |
+        | performance_glitch_user   | secret_sauce      | react-burger-menu-btn     |

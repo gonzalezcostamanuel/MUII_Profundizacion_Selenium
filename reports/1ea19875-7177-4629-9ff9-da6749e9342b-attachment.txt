@@ -1,0 +1,2 @@
+    Se introduce un usuario y contraseña correctos y se comprueba que aparece un elemento caracerístico de la ventana
+    principal como es el botón de menú. Se hacen pruebas con varios usuarios y contraseñas
