@@ -55,3 +55,4 @@ allure serve reports/
 Se muestra un ejemplo del resultado a continuación:
 
 ![ejemplo reporte allure](reporteAllure.png)
+![ejemplo2 reporte allure](allure_listado.png)
